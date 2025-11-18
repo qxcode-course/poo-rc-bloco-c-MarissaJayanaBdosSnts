@@ -1,0 +1,149 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-17_22-19-59",
+            "content": "@@ -1,19 +1 @@\n  \n- class Cliente:%0A  \n",
+            "lines": "1"
+        },
+        {
+            "label": "2025-11-17_22-25-03",
+            "content": "@@ -16,131 +16,4 @@\n :%0A  \n-def __init__(self, identificador: str, telefone: int):%0A    self.identificador = identificador%0A    self.telefone = telefone%0A    \n",
+            "lines": "2"
+        },
+        {
+            "label": "2025-11-17_22-34-31",
+            "content": "@@ -1,8 +1,10 @@\n+  \n class Cl\n@@ -10,16 +10,16 @@\n liente:%0A\n-\n   def __\n@@ -139,145 +139,8 @@\n one%0A\n-%0A  def __str__(self):%0A    return self.identificador + %22:%22 + str(self.telefone)%0A%0A  def obter_telefone(self):%0A    return self.telefone%0A  %0A  def\n+    \n",
+            "lines": "5"
+        },
+        {
+            "label": "2025-11-17_22-49-43",
+            "content": "@@ -1,61 +1,68 @@\n-class Cliente:%0A    def __init__(self, identificador: str,\n+@@ -8,18 +8,16 @@%0A liente:%250A%0A-  %0A   def __%0A@@ -57,36 +57,32 @@%0A\n  tel\n@@ -65,37 +65,43 @@\n  telefone: int):\n-%0A\n+%250A%0A-\n     \n+%0A \n     self.identif\n@@ -104,38 +104,55 @@\n ntif\n-icador = identi\n+%0A@@ -104,28 +104,24 @@%0A \n ficador\n-%0A\n+%250A\n     \n+%0A-\n    \n+%0A- %0A\n  sel\n@@ -164,29 +164,82 @@\n efon\n-e = telefone%0A%0A    def\n+%0A@@ -134,18 +134,16 @@%0A lefone%250A%250A%0A-  %0A   def __%0A@@ -147,36 +147,32 @@%0A \n  __s\n@@ -245,29 +245,35 @@\n str__(self):\n-%0A\n+%250A%0A-\n     \n+%0A \n     return s\n@@ -280,64 +280,92 @@\n elf.\n-identificador + %22:%22 + str(self.telefone)%0A%0A    def obter_\n+%0A@@ -211,26 +211,24 @@%0A elefone)%250A%250A  %0A- %0A- %0A def obter_te%0A@@ -233,36 +233,32 @@%0A \n tele\n@@ -371,29 +371,35 @@\n efone(self):\n-%0A\n+%250A%0A-\n     \n+%0A \n     return s\n@@ -406,27 +406,53 @@\n elf.\n-telefone%0A  %0A \n+%0A@@ -273,254 +273,9 @@%0A %250A  %250A%0A-  %0A\n    def\n+%0A-\n  obt\n@@ -474,17 +474,19 @@\n r(self):\n-%0A\n+%250A\n         \n@@ -514,12 +514,16 @@\n ador\n-%0A  %0A\n+%250A  %250A\n     \n@@ -568,17 +568,19 @@\n d: str):\n-%0A\n+%250A\n         \n@@ -607,18 +607,22 @@\n  novo_id\n-%0A%0A\n+%250A%250A\n     def \n@@ -664,17 +664,19 @@\n e: int):\n-%0A\n+%250A\n         \n@@ -709,18 +709,4 @@\n one%0A\n-%0Aclass Cinema:\n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-11-17_23-21-01",
+            "content": "@@ -363,16 +363,194 @@\n ador%0A  %0A\n+    def definir_identificador(self, novo_id: str):%0A        self.identificador = novo_id%0A%0A    def definir_telefone(self, novo_telefone: int):%0A        self.telefone = novo_telefone\n %0A%0Aclass \n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-11-17_23-25-19",
+            "content": "@@ -367,185 +367,8 @@\n %0A  %0A\n-    def definir_identificador(self, novo_id: str):%0A        self.identificador = novo_id%0A%0A    def definir_telefone(self, novo_telefone: int)%0A        self.telefone = novo_telefone\n %0A%0Acl\n@@ -378,13 +378,8 @@\n  Cinema:\n-%0A    \n",
+            "lines": "17"
+        },
+        {
+            "label": "2025-11-17_23-28-37",
+            "content": "@@ -564,202 +564,4 @@\n     \n-def __init__(self, capacidade: int):%0A        self.assentos = %5B%5D%0A        for _ in range(capacidade):%0A            self.assentos.append(None)%0A%0A    def procurar_cliente(self, nome: str) -%3E int:%0A        \n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-11-17_23-42-40",
+            "content": "@@ -762,261 +762,4 @@\n     \n-indice = 0%0A        for cadeira in self.assentos:%0A            if cadeira is not None:%0A                if cadeira.obter_indentificador() == nome:%0A                    return indice%0A                indice += 1%0A                return -1%0A            %0A            \n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-11-18_00-23-15",
+            "content": "@@ -998,166 +998,25 @@\n     \n-def verificar_indice(self, indice:int) -%3E bool:%0A        if indice %3E= 0 and indice %3C len(self.assentos):%0A            return True%0A        return False%0A    %0A    def%0A\n+        %0A            \n",
+            "lines": "36"
+        },
+        {
+            "label": "2025-11-18_00-25-34",
+            "content": "@@ -1159,73 +1159,5 @@\n  def\n- reservar(self, identificador: str, telefone: int%0A                 )\n %0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-18_00-41-27",
+            "content": "@@ -1208,78 +1208,17 @@\n  int\n-, indice: int) -%3E bool:%0A        if not self.verificar_indice(indice):%0A\n+%0A        \n     \n@@ -1226,13 +1226,6 @@\n     \n-   print\n+)\n %0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-11-18_00-55-05",
+            "content": "@@ -1295,324 +1295,5 @@\n rint\n-(%22fail: cadeira nao existe%22)%0A            return False%0A        if self.assentos%5Bindice%5D is not None:%0A            print(%22fail: cadeira ja esta ocupada%22)%0A            return False%0A        %0A        novo_cliente = Cliente(identificador, telefone)%0A        self.assentos%5Bindice%5D = novo_cliente%0A        return True%0A    %0A    def \n %0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-11-18_01-03-48",
+            "content": "@@ -1,1621 +1,35 @@\n-class Cliente:%0A    def __init__(self, identificador: str, telefone: int):%0A        self.identificador = identificador%0A        self.telefone = telefone%0A%0A    def __str__(self):%0A        return self.identificador + %22:%22 + str(self.telefone)%0A%0A    def obter_telefone(self):%0A        return self.telefone%0A  %0A    def obter_identificador(self):%0A        return self.identificador%0A  %0A    def definir_identificador(self, novo_id: str):%0A        self.identificador = novo_id%0A%0A    def definir_telefone(self, novo_telefone: int)%0A        self.telefone = novo_telefone%0A%0Aclass Cinema:%0A    def __init__(self, capacidade: int):%0A        self.assentos = %5B%5D%0A        for _ in range(capacidade):%0A            self.assentos.append(None)%0A%0A    def procurar_cliente(self, nome: str) -%3E int:%0A        indice = 0%0A        for cadeira in self.assentos:%0A            if cadeira is not None:%0A                if cadeira.obter_indentificador() == nome:%0A                    return indice%0A                indice += 1%0A                return -1%0A    def verificar_indice(self, indice:int) -%3E bool:%0A        if indice %3E= 0 and indice %3C len(self.assentos):%0A            return True%0A        return False%0A    %0A    def reservar(self, identificador: str, telefone: int, indice: int) -%3E bool:%0A        if not self.verificar_indice(indice):%0A            print(%22fail: cadeira nao existe%22)%0A            return False%0A        if self.assentos%5Bindice%5D is not None:%0A            print(%22fail: cadeira ja esta ocupada%22)%0A            return False%0A        %0A        novo_cliente = Cliente(identificador, telefone)%0A        self.assentos%5Bindice%5D = novo_cliente%0A        return True%0A    %0A    def \n+@@ -1614,183 +1614,5 @@%0A def %0A-\n canc\n@@ -64,16 +64,20 @@\n r) -\n-%3E\n+%253E\n  bool:\n-%0A\n+%250A\n     \n@@ -124,17 +124,19 @@\n ificador\n-%0A\n+%250A\n         \n@@ -182,17 +182,19 @@\n e == -1:\n-%0A\n+%250A\n         \n@@ -211,8 +211,13 @@\n       )%0A\n+ %250A%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-11-18_13-01-43",
+            "content": "@@ -1640,24 +1640,32 @@\n icador: str)\n+ -%3E bool\n :%0A        po\n@@ -1666,15 +1666,14 @@\n     \n-posicao\n+indice\n  = s\n@@ -1684,9 +1684,113 @@\n procurar\n+_cliente(identificador%0A                                       if indice == -1:%0A                        )\n %0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-18_13-04-02",
+            "content": "@@ -1,1712 +1,61 @@\n-class Cliente:%0A    def __init__(self, identificador: str, telefone: int):%0A        self.identificador = identificador%0A        self.telefone = telefone%0A%0A    def __str__(self):%0A        return self.identificador + %22:%22 + str(self.telefone)%0A%0A    def obter_telefone(self):%0A        return self.telefone%0A  %0A    def obter_identificador(self):%0A        return self.identificador%0A  %0A    def definir_identificador(self, novo_id: str):%0A        self.identificador = novo_id%0A%0A    def definir_telefone(self, novo_telefone: int)%0A        self.telefone = novo_telefone%0A%0Aclass Cinema:%0A    def __init__(self, capacidade: int):%0A        self.assentos = %5B%5D%0A        for _ in range(capacidade):%0A            self.assentos.append(None)%0A%0A    def procurar_cliente(self, nome: str) -%3E int:%0A        indice = 0%0A        for cadeira in self.assentos:%0A            if cadeira is not None:%0A                if cadeira.obter_indentificador() == nome:%0A                    return indice%0A                indice += 1%0A                return -1%0A    def verificar_indice(self, indice:int) -%3E bool:%0A        if indice %3E= 0 and indice %3C len(self.assentos):%0A            return True%0A        return False%0A    %0A    def reservar(self, identificador: str, telefone: int, indice: int) -%3E bool:%0A        if not self.verificar_indice(indice):%0A            print(%22fail: cadeira nao existe%22)%0A            return False%0A        if self.assentos%5Bindice%5D is not None:%0A            print(%22fail: cadeira ja esta ocupada%22)%0A            return False%0A        %0A        novo_cliente = Cliente(identificador, telefone)%0A        self.assentos%5Bindice%5D = novo_cliente%0A        return True%0A    %0A    def cancelar(self, identificador: str):%0A        posicao = self.procurar_cliente(identificador)%0A\n+@@ -1681,117 +1681,5 @@%0A urar%0A-_cliente(identificador)%250A\n     \n@@ -75,17 +75,19 @@\n o == -1:\n-%0A\n+%250A\n         \n@@ -96,17 +96,19 @@\n   print(\n-%22\n+%2522\n fail: cl\n@@ -131,11 +131,15 @@\n rado\n-%22)%0A\n+%2522)%250A\n     \n@@ -147,8 +147,13 @@\n        %0A\n+ %250A%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-11-18_13-13-17",
+            "content": "@@ -1793,140 +1793,5 @@\n     \n-return False%0A        %0A        self.assentos%5Bposicao%5D = None%0A        return True%0A    %0A    def __str__(self):%0A        texto = %22%5B%22%0A        \n+%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-18_13-19-30",
+            "content": "@@ -1916,17 +1916,16 @@\n to = %22%5B%22\n- \n %0A       \n@@ -1929,311 +1929,4 @@\n     \n-for cadeira in self.assentos:%0A            if cadeira is None:%0A                texto += %22 - %22%0A            else:%0A                texto += str (cadeira)%0A                texto += %22%22%0A            if len(texto)%3E1:%0A                texto = texto%5B:1%5D %0A                texto += %22%5D%22%0A                return texto        \n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-11-18_16-24-41",
+            "content": "@@ -2237,889 +2237,4 @@\n     \n-%0A            %0A    def main():%0A        sala = None%0A        while True:%0A%0A            linha = input()%0A            print(%22$%22 + linha)%0A            partes = linha.split()%0A%0A            comando = partes%5B0%5D%0A%0A            if comando == %22end%22:%0A                return%0A            %0A            elif comando == %22init%22:%0A                capacidade = int(partes%5B1%5D)%0A                sala = Cinema(capacidade)%0A%0A            elif comando == %22reserve%22:%0A                ident = partes%5B1%5D%0A                telefone = int(partes%5B2%5D)%0A                indice = int(partes%5B3%5D)%0A                sala.reservar(ident, telefone, indice)%0A%0A            elif comando == %22cancel%22:%0A                id_cliente = partes%5B1%5D%0A                sala.cancelar(id_cliente)%0A%0A            elif comando == %22show%22:%0A                if sala is None:%0A                    print(%22%5B%5D%22)%0A                else:%0A                    print(sala)%0A%0A main()\n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-11-18_16-42-05",
+            "content": "@@ -3111,14 +3111,15 @@\n (sala)%0A%0A\n+ \n main()\n",
+            "lines": "107"
+        },
+        {
+            "label": "2025-11-18_16-42-06",
+            "content": "@@ -494,33 +494,32 @@\n o_telefone: int)\n-:\n %0A        self.te\n",
+            "lines": "107"
+        },
+        {
+            "label": "2025-11-18_16-42-37",
+            "content": "@@ -3116,31 +3116,10 @@\n a)%0A%0A\n-if __name__ == %22main%22:%0A    \n+main()\n",
+            "lines": "107"
+        },
+        {
+            "label": "2025-11-18_16-43-08",
+            "content": "@@ -3143,17 +3143,4 @@\n     \n-Cinema.main()\n",
+            "lines": "108"
+        },
+        {
+            "label": "2025-11-18_16-43-09",
+            "content": "@@ -543,17 +543,16 @@\n lefone%0A%0A\n-%0A\n class Ci\n@@ -623,20 +623,25 @@\n ntos = %5B\n-None\n+%5D%0A       \n  for _ i\n@@ -659,17 +659,56 @@\n acidade)\n-%5D\n+:%0A            self.assentos.append(None)\n %0A%0A    de\n@@ -763,14 +763,30 @@\n     \n+indice = 0%0A        \n for\n- i,\n  cad\n@@ -797,18 +797,8 @@\n  in \n-enumerate(\n self\n@@ -806,17 +806,16 @@\n assentos\n-)\n :%0A      \n@@ -846,12 +846,28 @@\n None\n- and\n+:%0A                if\n  cad\n@@ -874,24 +874,25 @@\n eira.obter_i\n+n\n dentificador\n@@ -923,16 +923,20 @@\n     \n+  \n+  \n return i\n %0A   \n@@ -931,17 +931,58 @@\n return i\n+ndice\n %0A\n+                indice += 1%0A        \n         \n@@ -991,17 +991,16 @@\n turn -1%0A\n-%0A\n     def \n@@ -1021,33 +1021,32 @@\n ce(self, indice:\n- \n int) -%3E bool:%0A  \n@@ -1055,19 +1055,26 @@\n     \n-return 0 %3C=\n+if indice %3E= 0 and\n  ind\n@@ -1097,16 +1097,62 @@\n ssentos)\n+:%0A            return True%0A        return False\n %0A    %0A  \n@@ -1338,33 +1338,32 @@\n    return False%0A\n-%0A\n         if self.\n@@ -1489,239 +1489,100 @@\n     \n-# verificar se cliente j%C3%A1 existe%0A        if self.procurar_cliente(identificador) != -1:%0A            print(%22fail: cliente ja esta no cinema%22)%0A            return False%0A%0A        self.assentos%5Bindice%5D = Cliente(identificador, telefone)\n+novo_cliente = Cliente(identificador, telefone)%0A        self.assentos%5Bindice%5D = novo_cliente\n %0A   \n@@ -1916,18 +1916,18 @@\n xto = %22%5B\n- \n %22\n+ \n %0A       \n@@ -2015,16 +2015,17 @@\n xto += %22\n+ \n - %22%0A    \n@@ -2066,16 +2066,17 @@\n o += str\n+ \n (cadeira\n@@ -2080,23 +2080,112 @@\n ira)\n+%0A                texto\n  +\n+=\n  %22\n- \n %22%0A\n+            if len(texto)%3E1:%0A                texto = texto%5B:1%5D %0A   \n         \n text\n@@ -2172,32 +2172,37 @@\n :1%5D %0A           \n+     \n texto += %22%5D%22%0A   \n@@ -2202,24 +2202,32 @@\n %22%5D%22%0A        \n+   \n+     \n return texto\n@@ -2226,19 +2226,42 @@\n rn texto\n-%0A%0A%0A\n+        %0A            %0A    \n def main\n@@ -2264,16 +2264,20 @@\n main():%0A\n+    \n     sala\n@@ -2280,24 +2280,28 @@\n sala = None%0A\n+    \n     while Tr\n@@ -2304,16 +2304,21 @@\n e True:%0A\n+%0A    \n         \n@@ -2337,24 +2337,28 @@\n t()%0A        \n+   \n+ \n print(%22$%22 + \n@@ -2364,16 +2364,20 @@\n  linha)%0A\n+    \n         \n@@ -2408,16 +2408,20 @@\n         \n+  \n+  \n comando \n@@ -2433,16 +2433,20 @@\n tes%5B0%5D%0A%0A\n+    \n         \n@@ -2474,24 +2474,28 @@\n             \n+  \n+  \n return%0A     \n@@ -2497,25 +2497,30 @@\n         \n-%0A\n+    %0A \n         \n elif com\n@@ -2503,32 +2503,35 @@\n       %0A         \n+   \n elif comando == \n@@ -2538,16 +2538,20 @@\n %22init%22:%0A\n+    \n         \n@@ -2590,24 +2590,28 @@\n             \n+ \n+   \n sala = Cinem\n@@ -2621,24 +2621,28 @@\n apacidade)%0A%0A\n+    \n         elif\n@@ -2676,16 +2676,20 @@\n         \n+    \n ident = \n@@ -2690,32 +2690,36 @@\n ent = partes%5B1%5D%0A\n+    \n             tele\n@@ -2744,32 +2744,36 @@\n 2%5D)%0A            \n+    \n indice = int(par\n@@ -2780,16 +2780,20 @@\n tes%5B3%5D)%0A\n+    \n         \n@@ -2836,32 +2836,36 @@\n ndice)%0A%0A        \n+    \n elif comando == \n@@ -2874,16 +2874,20 @@\n ancel%22:%0A\n+    \n         \n@@ -2921,24 +2921,28 @@\n             \n+    \n sala.cancela\n@@ -2956,32 +2956,36 @@\n iente)%0A%0A        \n+   \n+ \n elif comando == \n@@ -3000,24 +3000,28 @@\n             \n+    \n if sala is N\n@@ -3037,24 +3037,28 @@\n             \n+   \n+ \n print(%22%5B%5D%22)%0A\n@@ -3061,32 +3061,36 @@\n %5D%22)%0A            \n+    \n else:%0A          \n@@ -3091,24 +3091,28 @@\n             \n+  \n+  \n print(sala)%0A\n@@ -3112,17 +3112,16 @@\n (sala)%0A%0A\n-%0A\n if __nam\n@@ -3132,26 +3132,28 @@\n == %22\n-__\n main\n-__\n %22:%0A    \n+Cinema.\n main()\n-%0A\n",
+            "lines": "108"
+        },
+        {
+            "label": "2025-11-18_16-44-51",
+            "content": "@@ -1895,16 +1895,17 @@\n xto = %22%5B\n+ \n %22%0A      \n",
+            "lines": "106"
+        },
+        {
+            "label": "2025-11-18_16-45-42",
+            "content": "@@ -2075,16 +2075,17 @@\n texto +=\n+ \n %22%5D%22%0A    \n",
+            "lines": "106"
+        },
+        {
+            "label": "2025-11-18_16-45-58",
+            "content": "@@ -2075,17 +2075,16 @@\n texto +=\n- \n %22%5D%22%0A    \n",
+            "lines": "106"
+        },
+        {
+            "label": "2025-11-18_16-46-05",
+            "content": "@@ -2063,38 +2063,8 @@\n %22 %22%0A\n-        texto = texto.strip()%0A\n     \n",
+            "lines": "106"
+        },
+        {
+            "label": "2025-11-18_16-47-10",
+            "content": "@@ -1745,29 +1745,25 @@\n te nao e\n-sta no cinema\n+ncontrado\n %22)%0A     \n",
+            "lines": "107"
+        },
+        {
+            "label": "2025-11-18_16-47-44",
+            "content": "class Cliente:\n    def __init__(self, identificador: str, telefone: int):\n        self.identificador = identificador\n        self.telefone = telefone\n\n    def __str__(self):\n        return self.identificador + \":\" + str(self.telefone)\n\n    def obter_telefone(self):\n        return self.telefone\n  \n    def obter_identificador(self):\n        return self.identificador\n  \n    def definir_identificador(self, novo_id: str):\n        self.identificador = novo_id\n\n    def definir_telefone(self, novo_telefone: int):\n        self.telefone = novo_telefone\n\n\nclass Cinema:\n    def __init__(self, capacidade: int):\n        self.assentos = [None for _ in range(capacidade)]\n\n    def procurar_cliente(self, nome: str) -> int:\n        for i, cadeira in enumerate(self.assentos):\n            if cadeira is not None and cadeira.obter_identificador() == nome:\n                return i\n        return -1\n\n    def verificar_indice(self, indice: int) -> bool:\n        return 0 <= indice < len(self.assentos)\n    \n    def reservar(self, identificador: str, telefone: int, indice: int) -> bool:\n        if not self.verificar_indice(indice):\n            print(\"fail: cadeira nao existe\")\n            return False\n\n        if self.assentos[indice] is not None:\n            print(\"fail: cadeira ja esta ocupada\")\n            return False\n        \n        # verificar se cliente j\u00e1 existe\n        if self.procurar_cliente(identificador) != -1:\n            print(\"fail: cliente ja esta no cinema\")\n            return False\n\n        self.assentos[indice] = Cliente(identificador, telefone)\n        return True\n    \n    def cancelar(self, identificador: str):\n        posicao = self.procurar_cliente(identificador)\n        if posicao == -1:\n            print(\"fail: cliente nao esta no cinema\")\n            return False\n        \n        self.assentos[posicao] = None\n        return True\n    \n    def __str__(self):\n        texto = \"[\"\n        for cadeira in self.assentos:\n            if cadeira is None:\n                texto += \"- \"\n            else:\n                texto += str(cadeira) + \" \"\n        texto = texto.strip()\n        texto += \"]\"\n        return texto\n\n\ndef main():\n    sala = None\n    while True:\n        linha = input()\n        print(\"$\" + linha)\n        partes = linha.split()\n\n        comando = partes[0]\n\n        if comando == \"end\":\n            return\n        \n        elif comando == \"init\":\n            capacidade = int(partes[1])\n            sala = Cinema(capacidade)\n\n        elif comando == \"reserve\":\n            ident = partes[1]\n            telefone = int(partes[2])\n            indice = int(partes[3])\n            sala.reservar(ident, telefone, indice)\n\n        elif comando == \"cancel\":\n            id_cliente = partes[1]\n            sala.cancelar(id_cliente)\n\n        elif comando == \"show\":\n            if sala is None:\n                print(\"[]\")\n            else:\n                print(sala)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+            "lines": "107"
+        }
+    ]
+}
