@@ -12,15 +12,15 @@ sources:
   type: clone
   branch: master
   cache_path: ''
-  cache_timestamp: '2025-11-18 16:21:27'
+  cache_timestamp: '2025-11-19 13:08:56'
   filters:
   - listas
 expanded:
 - poo@campanha-principal
 - poo@bloco_c-listas
 tasks:
-  poo@array: '{rate:80, human:2amigo, guide:2professor, other:2sites_de_python, alone:8,
-    study:295}'
+  poo@array: '{rate:80, human:2amigo, iagen:2gtp, guide:2professor, other:2sites_de_python,
+    alone:8, study:295}'
   poo@budega: '{rate:100, human:2_sim, guide:2sim_video_aula_do_professor, alone:6,
     study:500}'
   poo@lapiseira: '{rate:100, human:2_amigo, guide:2professor_explicando, alone:6,
@@ -35,4 +35,4 @@ flags:
   graph: 1
   xray: 0
 lang: py
-selected: poo@bloco_c-listas
+selected: poo@campanha-principal
